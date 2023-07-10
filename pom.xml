@@ -30,15 +30,14 @@
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-core</artifactId>
       <version>1.3</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 
   <build>
     <sourceDirectory>./src/myAdapter</sourceDirectory>
     <testSourceDirectory>./src/myTest</testSourceDirectory>
-    <outputDirectory>./target/myAdapter</outputDirectory>
-    <testOutputDirectory>./target/myTest</testOutputDirectory>
+    <outputDirectory>./target</outputDirectory>
+    <testOutputDirectory>./target</testOutputDirectory>
 
     <pluginManagement>
       <plugins>

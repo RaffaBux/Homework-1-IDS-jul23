@@ -1,36 +1,54 @@
 package myTest;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.runners.Suite;
-import org.junit.runner.RunWith;
+import org.junit.runner.Result;
 import org.junit.runner.JUnitCore;
+import org.junit.runner.notification.Failure;
 
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
-  MapAdapterTest.class,
-  MapAdapterEntrySetTest.class,
-  MapAdapterValuesCollectionTest.class,
-  MapAdapterKeySetTest.class
-})
-
+/**
+* @author Bussolotto Raffaele - n° mat.: 1224718
+*/
 public class TestRunner {
-
-	@BeforeClass
-  public static void setUp() {
+  
+  public static void main(String[] args){
     System.out.println("\nSTARTING ALL THE TESTS\n");
-  }
 
-  @AfterClass
-  public static void tearDown() {
+    Result result = JUnitCore.runClasses(MapAdapterTest.class);
+    for(Failure failures : result.getFailures()) {
+      System.out.println(failures.toString());
+    }
+    
+    System.out.println("\n--------------------------------------------------\n");
+    System.out.println("MapAdapterTest - Tests run: " + result.getRunCount() + ", Failed: " + result.getFailureCount()+ ", Succeeded: " + (result.getRunCount() - result.getFailureCount()));
+    System.out.println("\n--------------------------------------------------");
+
+    result = JUnitCore.runClasses(MapAdapterEntrySetTest.class);
+    for(Failure failures : result.getFailures()) {
+      System.out.println(failures.toString());
+    }
+
+    System.out.println("\n--------------------------------------------------\n");
+    System.out.println("MapAdapterEntrySetTest - Tests ran: " + result.getRunCount() + ", Failed: " + result.getFailureCount()+ ", Succeeded: " + (result.getRunCount() - result.getFailureCount()));
+    System.out.println("\n--------------------------------------------------");
+
+    result = JUnitCore.runClasses(MapAdapterValuesCollectionTest.class);
+    for(Failure failures : result.getFailures()) {
+      System.out.println(failures.toString());
+    }
+
+    System.out.println("\n--------------------------------------------------\n");
+    System.out.println("MapAdapterValuesCollectionTest - Tests ran: " + result.getRunCount() + ", Failed: " + result.getFailureCount()+ ", Succeeded: " + (result.getRunCount() - result.getFailureCount()));
+    System.out.println("\n--------------------------------------------------");
+
+    result = JUnitCore.runClasses(MapAdapterKeySetTest.class);
+    for(Failure failures : result.getFailures()) {
+      System.out.println(failures.toString());
+    }
+
+    System.out.println("\n--------------------------------------------------\n");
+    System.out.println("MapAdapterKeySetTest - Tests ran: " + result.getRunCount() + ", Failed: " + result.getFailureCount()+ ", Succeeded: " + (result.getRunCount() - result.getFailureCount()));
+    System.out.println("\n--------------------------------------------------");
+
     System.out.println("\nALL TESTS ENDED\n");
-  }
-
-  public static void main(String[] args) {
-    JUnitCore.main("myTest.MapAdapterTest");
-    JUnitCore.main("myTest.MapAdapterEntrySetTest");
-    JUnitCore.main("myTest.MapAdapterValuesCollectionTest");
-    JUnitCore.main("myTest.MapAdapterKeySetTest");
   }
 
 }

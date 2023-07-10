@@ -1,7 +1,5 @@
 package myTest;
 
-import java.beans.Transient;
-
 import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Before;
