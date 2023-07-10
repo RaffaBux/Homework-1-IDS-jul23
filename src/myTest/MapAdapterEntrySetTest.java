@@ -1,13 +1,13 @@
 package myTest;
 
+import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
 
-import myAdapter.HCollection;
-import myAdapter.HIterator;
 import myAdapter.HSet;
+import myAdapter.HIterator;
 import myAdapter.MapAdapter;
+import myAdapter.HCollection;
 import myAdapter.MapAdapter.Entry;
 
 public class MapAdapterEntrySetTest {

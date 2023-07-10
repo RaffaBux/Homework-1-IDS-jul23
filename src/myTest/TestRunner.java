@@ -2,13 +2,16 @@ package myTest;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import org.junit.runner.RunWith;
+import org.junit.runner.JUnitCore;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
   MapAdapterTest.class,
-  MapAdapterEntrySetTest.class
+  MapAdapterEntrySetTest.class,
+  MapAdapterValuesCollectionTest.class,
+  MapAdapterKeySetTest.class
 })
 
 public class TestRunner {
@@ -20,7 +23,14 @@ public class TestRunner {
 
   @AfterClass
   public static void tearDown() {
-    System.out.println("\nALL TESTS ENDED\n\nRESULTS (check TestCasesExecutionRecord.html for more infos):");
+    System.out.println("\nALL TESTS ENDED\n");
+  }
+
+  public static void main(String[] args) {
+    JUnitCore.main("myTest.MapAdapterTest");
+    JUnitCore.main("myTest.MapAdapterEntrySetTest");
+    JUnitCore.main("myTest.MapAdapterValuesCollectionTest");
+    JUnitCore.main("myTest.MapAdapterKeySetTest");
   }
 
 }

@@ -1,8 +1,10 @@
 package myTest;
 
+import java.beans.Transient;
+
+import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
 
 import myAdapter.MapAdapter;
 
@@ -31,6 +33,12 @@ public class MapAdapterTest {
 		Assert.assertEquals(4, mapAdapter.size());
 		mapAdapter.remove("k3");
 		Assert.assertEquals(3, mapAdapter.size());
+	}
+
+	@Test
+	public void valuesTest(){
+		Object valuesCollection = mapAdapter.values();
+		Assert.assertNotNull(valuesCollection);
 	}
 
 	@Test
