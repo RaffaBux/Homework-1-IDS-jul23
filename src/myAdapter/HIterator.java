@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
  * 1) Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
  * 2) Method names have been improved.
  * Refers to java.util.Iterator@1.4.2
- *@author Bussolotto Raffaele 1224718
+ * @author Bussolotto Raffaele 1224718
 */
 public interface HIterator {
 

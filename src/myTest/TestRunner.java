@@ -5,8 +5,9 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.notification.Failure;
 
 /**
-* @author Bussolotto Raffaele - n° mat.: 1224718
-*/
+ * @author Bussolotto Raffaele - n° mat.: 1224718
+ * <br>
+ */
 public class TestRunner {
   
   public static void main(String[] args){
