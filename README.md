@@ -4,14 +4,9 @@
 
 WARNING: compiling manually could generate some errors due compiled classes unintended locations
 
-### TO GENERATE API DOC
+### TO GENERATE BOTH API AND TEST DOCUMENTATION
 
-`mvn javadoc:javadoc`
-
-
-### TO GENERATE TEST DOC
-
-`mvn surefire-report:report`
+`mvn javadoc:javadoc javadoc:test-javadoc`
 
 ### TO RUN TEST MANUALLY FROM COMMAND LINE (WINDOWS)
 
